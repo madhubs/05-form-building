@@ -11,7 +11,22 @@
     <link rel="stylesheet" href="styles/modules.css">
     <!-- NOTE (stretch goal): To fully incorporate the highlighting library "hljs" we need to fill the empty link tag below to refer to a CSS file that will handle our text highlighting -->
     <link>
-    <!-- TODO: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
+    <!-- DONE: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+
     </head>
   <body>
     <header class="site-header clearfix">
@@ -34,14 +49,34 @@
 
       <section id="write" class="tab-content">
         <h1>Create New Article</h1>
-        <!-- TODO: Set up a form to accept user input for a new blog article. Remember that we need:
-                   1. Article title
-                   2. Article body
-                   3. Article author
-                   4. Author's URL
-                   5. Article category
-                   6. Some way to know if this article is a draft or is published -->
+           <form id="articleForm" action="#">
+          <label>Title
+            <input type="text" id="articleTitle" placeholder="Title">
+          </label>
+          <label>Text
+            <textarea row="10" id="articleText" placeholder="Text"></textarea>
+          </label>
+          <label>Author
+            <input type="text" id="articleAuthor" placeholder="Author">
+          </label>
+          <label>Author URL
+            <input type="text" id="articleAuthorUrl" placeholder="Author URL">
+          </label>
+          <label>Category
+            <input type="text" id="articleCategory" placeholder="Article category">
+          </label>
+          <label>
+            <input type="checkbox" id="articlePublished" placeholder="Is this a draft? If yes check box">"Is this a draft? If yes check box"
+          </label>
+        </form>
       </section>
+      <!-- DONE: Set up a form to accept user input for a new blog article. Remember that we need:
+                 1. Article title
+                 2. Article body
+                 3. Article author
+                 4. Author's URL
+                 5. Article category
+                 6. Some way to know if this article is a draft or is published -->
 
       <section id="articles" class="tab-content">
         <!-- NOTE: This is where we will display our article preview -->

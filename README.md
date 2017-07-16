@@ -43,6 +43,7 @@ When you are finished with lab, follow these steps to submit your work. Create o
 #### Stretch Goals
 1. We have two new libraries that we can add: HighlightJS (provides syntax highlighting of code blocks) and MarkedJS (allows use of Markdown format text). Link to (or include) these two libraries and implement them.
 
+Neat!
 ---
 
 ## Rubric  

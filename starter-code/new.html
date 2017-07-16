@@ -83,7 +83,10 @@
       </section>
 
       <section id="article-export">
-        <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
+        <div class="container" style="height:120px; width:120px; border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"> place holder for the JSON snippet</div> <!--div styling reference from quickit- https://www.quackit.com/html/codes/html_scroll_box.cfm-->
+      <p>When finalized, copy the above JSON, and paste into blogArticles.js.</p>
+
+        <!-- DONE: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
       </section>
 
     </main>
@@ -98,9 +101,10 @@
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
+      // DONE: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
+      articleView.initIndexPage()
     </script>
   </body>
 </html>
